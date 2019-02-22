@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h2>Spring MVC - Home Page</h2>
+<p>
+Hello, Dear ${param.userName}
+</p>
 </body>
 </html>
