@@ -3,7 +3,8 @@
 <html>
 <body>
 <h2>Spring MVC - Home Page</h2>
-<hr/>
-<a href="/SpringLearning_war_exploded/user">User page</a>
+<hr/><h4>Menu</h4>
+<a href="/SpringLearning_war_exploded/hello/personal">Greetings page</a><br/>
+<a href="/SpringLearning_war_exploded/user/showForm">User page</a>
 </body>
 </html>

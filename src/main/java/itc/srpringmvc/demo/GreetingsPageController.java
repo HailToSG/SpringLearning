@@ -8,11 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
+@RequestMapping(value = {"/hello"})
 public class GreetingsPageController {
 
-    @RequestMapping({"/user"})
+    @RequestMapping({"/personal"})
     private String showInfo() {
-        return "user-page";
+        return "personal-page";
     }
 
     @RequestMapping({"/processForm1"})
