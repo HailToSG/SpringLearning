@@ -1,8 +1,21 @@
 package itc.srpringmvc.demo;
 
-public class User {
+import java.util.LinkedHashMap;
 
-    public User(){}
+public class User {
+    public LinkedHashMap<String, String> getCountryOptions() {
+        return countryOptions;
+    }
+
+    private LinkedHashMap<String ,String > countryOptions;
+
+    public User(){
+        countryOptions = new LinkedHashMap<>();
+        countryOptions.put("GE", "Georgia");
+        countryOptions.put("RU", "Russia");
+        countryOptions.put("SB", "Serbia");
+        countryOptions.put("GR", "Greece");
+    }
 
     public String getFirstName() {
         return firstName;
@@ -22,4 +35,14 @@ public class User {
 
     private String firstName;
     private String lastName;
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    private String country;
 }
