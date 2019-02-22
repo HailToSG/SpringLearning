@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<form action="processForm" method="GET">
+<form action="processForm2" method="GET">
     <input type="text" name="userName" placeholder="What is your name?"/>
     <input type="submit"/>
 </form>

@@ -3,7 +3,7 @@
 <html>
 <body>
 <p>
-Hello, Dear ${param.userName}
+${greeting}
 </p>
 </body>
 </html>
