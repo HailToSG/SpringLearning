@@ -10,10 +10,13 @@
     Call your name: <form:input path="firstName"/><br/>
     Call your lastname: <form:input path="lastName"/><br/>
     What is your country: <form:select path="country">
-    <form:options items="${user.countryOptions}"/>
-</form:select>
+    <form:options items="${user.countryOptions}"/><br/>
+</form:select><br/>
+    What is your age:<br/>
+    <form:radiobuttons items="${user.ageScale}" path="age"/><br/>
+    Rights:<br/>
+    <form:checkboxes items="${user.rights}" path="choosenRights"/>
 
-    
     <br/>
     <input type="submit" value="Submit">
 </form:form>
