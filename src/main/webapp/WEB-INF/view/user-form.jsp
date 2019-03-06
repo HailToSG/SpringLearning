@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
     <title>Title</title>
@@ -8,7 +8,8 @@
 <%--@elvariable id="user" type="itc.srpringmvc.demo"--%>
 <form:form action="processForm" modelAttribute="user">
     Call your name: <form:input path="firstName"/><br/>
-    Call your lastname: <form:input path="lastName"/><br/>
+    Call your lastname: <form:input path="lastName"/>
+    <form:errors path="lastName" cssClass="error"/><br/>
     What is your country: <form:select path="country">
     <form:options items="${user.countryOptions}"/><br/>
 </form:select><br/>

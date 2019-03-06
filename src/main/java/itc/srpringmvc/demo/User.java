@@ -1,5 +1,7 @@
 package itc.srpringmvc.demo;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -40,7 +42,8 @@ public class User {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-
+    @NotNull(message = "Обязательное поле")
+    @Size(min = 3, message = "Как минимум 3")
     public String getLastName() {
         return lastName;
     }
