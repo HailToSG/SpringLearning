@@ -20,9 +20,9 @@ public class User {
         countryOptions.put("SB", "Serbia");
         countryOptions.put("GR", "Greece");
 
-        ageScale.add( "Ml(0-7)");
+        ageScale.add("Ml(0-7)");
         ageScale.add("Ot (7-14)");
-        ageScale.add( "YM (14-33)");
+        ageScale.add("YM (14-33)");
         ageScale.add("AM (33-59)");
         ageScale.add("OM (59-...)");
 
@@ -42,8 +42,8 @@ public class User {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    @NotNull(message = "Обязательное поле")
-    @Size(min = 3, message = "Как минимум 3")
+    @NotNull
+    @Size
     public String getLastName() {
         return lastName;
     }
