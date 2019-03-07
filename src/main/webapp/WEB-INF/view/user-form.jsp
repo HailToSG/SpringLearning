@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>Title</title>
+    <style>
+        .error{color:red}
+    </style>
 </head>
 <body><h2>Give us your personal data</h2>
 <%--@elvariable id="user" type="itc.srpringmvc.demo"--%>
@@ -16,7 +19,9 @@
     What is your age:<br/>
     <form:radiobuttons items="${user.ageScale}" path="age"/><br/>
     Rights:<br/>
-    <form:checkboxes items="${user.rights}" path="choosenRights"/>
+    <form:checkboxes items="${user.rights}" path="choosenRights"/><br/>
+    Salary: <form:input path="salary"/><br/>
+    <form:errors path="salary" cssClass="error"/><br/>
 
     <br/>
     <input type="submit" value="Submit">

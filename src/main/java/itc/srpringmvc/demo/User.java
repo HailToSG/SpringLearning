@@ -1,5 +1,7 @@
 package itc.srpringmvc.demo;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -11,7 +13,7 @@ public class User {
         return countryOptions;
     }
 
-    private LinkedHashMap<String ,String > countryOptions;
+    private LinkedHashMap<String,String > countryOptions;
 
     public User(){
         countryOptions = new LinkedHashMap<>();
@@ -35,6 +37,22 @@ public class User {
     private List<String> rights = new ArrayList<>();
     private List<String> choosenRights = new ArrayList<>();
 
+    @Min(value = 2, message = "are you kidding me?")
+    @Max(value = 10000000, message = "too big")
+    private int salary;
+
+    @NotNull
+    @Size
+    private String lastName;
+
+    public int getSalary() {
+        return salary;
+    }
+
+    public void setSalary(int salary) {
+        this.salary = salary;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -42,8 +60,7 @@ public class User {
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    @NotNull
-    @Size
+
     public String getLastName() {
         return lastName;
     }
@@ -53,7 +70,6 @@ public class User {
     }
 
     private String firstName;
-    private String lastName;
 
     public String getCountry() {
         return country;
