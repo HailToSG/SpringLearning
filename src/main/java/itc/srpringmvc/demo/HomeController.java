@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping({"/"})
 public class HomeController {
 
-    @RequestMapping
+    @RequestMapping({"/start"})
     public String showStartPage(){
         return "main-menu";
     }

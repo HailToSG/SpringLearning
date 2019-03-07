@@ -4,7 +4,7 @@
 <head>
     <title>Title</title>
     <style>
-        .error{color:red}
+        .error{color: #ff5500}
     </style>
 </head>
 <body><h2>Give us your personal data</h2>

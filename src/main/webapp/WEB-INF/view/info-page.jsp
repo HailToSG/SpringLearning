@@ -6,11 +6,13 @@
 </head>
 <%--@elvariable id="user" type="itc.srpringmvc.demo"--%>
 <body><h2>User's personal</h2>
-${user.firstName} <br/>
-${user.lastName} <br/>
-${user.country} <br/>
-${user.age}
+Name: ${user.firstName} <br/>
+Last name: ${user.lastName} <br/>
+Country: ${user.country} <br/>
+Age: ${user.age}<br/>
+Salary: ${user.salary}<br/>
 
+Permissions:
 <ul>
     <c:forEach var ="tmp" items="${user.choosenRights}">
         <li>${tmp}</li>
