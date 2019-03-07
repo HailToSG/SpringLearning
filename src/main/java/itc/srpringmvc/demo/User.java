@@ -10,9 +10,9 @@ public class User {
         return countryOptions;
     }
 
-    private LinkedHashMap<String,String > countryOptions;
+    private LinkedHashMap<String, String> countryOptions;
 
-    public User(){
+    public User() {
         countryOptions = new LinkedHashMap<>();
         countryOptions.put("GE", "Georgia");
         countryOptions.put("RU", "Russia");
@@ -32,15 +32,19 @@ public class User {
     }
 
     private List<String> rights = new ArrayList<>();
+
+    @NotEmpty(message = "choose permissions")
     private List<String> choosenRights = new ArrayList<>();
+
     @Min(value = 2, message = "are you kidding me?")
     @Max(value = 10000000, message = "too big")
-    private int salary;
+    private Integer salary;
 
     @NotNull
-    @Size
+    @Size(min = 2, max = 15)
     private String lastName;
 
+    @NotNull(message = "choose your age")
     private String age;
 
     @Pattern(regexp = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:" +
@@ -56,16 +60,6 @@ public class User {
 
     public void seteMail(String eMail) {
         this.eMail = eMail;
-    }
-
-
-
-    public int getSalary() {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
     }
 
     public String getFirstName() {
@@ -137,4 +131,12 @@ public class User {
     public void setChoosenRights(List<String> choosenRights) {
         this.choosenRights = choosenRights;
     }
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Integer salary) {
+        this.salary = salary;
+    }
+
 }
