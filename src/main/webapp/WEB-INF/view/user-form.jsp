@@ -13,6 +13,8 @@
     Your name: <form:input path="firstName"/><br/>
     Your lastname(*): <form:input path="lastName"/>
     <form:errors path="lastName" cssClass="error"/><br/>
+    Your e-mail(*): <form:input path="eMail"/>
+    <form:errors path="eMail" cssClass="error"/><br/>
     What is your country: <form:select path="country">
     <form:options items="${user.countryOptions}"/><br/>
 </form:select><br/>

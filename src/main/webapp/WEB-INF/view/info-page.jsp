@@ -8,6 +8,7 @@
 <body><h2>User's personal</h2>
 Name: ${user.firstName} <br/>
 Last name: ${user.lastName} <br/>
+E-mail: ${user.eMail} <br/>
 Country: ${user.country} <br/>
 Age: ${user.age}<br/>
 Salary: ${user.salary}<br/>

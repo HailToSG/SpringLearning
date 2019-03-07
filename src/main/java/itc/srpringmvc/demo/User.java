@@ -1,9 +1,6 @@
 package itc.srpringmvc.demo;
 
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -36,7 +33,6 @@ public class User {
 
     private List<String> rights = new ArrayList<>();
     private List<String> choosenRights = new ArrayList<>();
-
     @Min(value = 2, message = "are you kidding me?")
     @Max(value = 10000000, message = "too big")
     private int salary;
@@ -44,6 +40,25 @@ public class User {
     @NotNull
     @Size
     private String lastName;
+
+    private String age;
+
+    @Pattern(regexp = "(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|\"(?:" +
+            "[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:" +
+            "[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\\.){3}(?:" +
+            "(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21-\\x5a\\x53-\\x7f]|\\\\" +
+            "[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)])", message = "no, pleeeease!")
+    private String eMail;
+
+    public String geteMail() {
+        return eMail;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
+
 
     public int getSalary() {
         return salary;
@@ -94,8 +109,6 @@ public class User {
     }
 
     private List<String> ageScale = new ArrayList<>();
-
-    private String age;
 
     public void setAgeScale(List<String> ageScale) {
         this.ageScale = ageScale;
