@@ -55,7 +55,7 @@ public class User {
     }
 
     @NotNull
-    @PasswordWithoutLetter(value = 'F')
+    @PasswordWithoutLetter(value = 'Z')
     private String password;
 
     @NotNull(message = "choose your age")
