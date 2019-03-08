@@ -13,11 +13,12 @@
     Your name: <form:input path="firstName"/><br/>
     Your lastname(*): <form:input path="lastName"/>
     <form:errors path="lastName" cssClass="error"/><br/>
+    Choose password:  <form:input type="password" path="password"/>
+    <form:errors path="password" cssClass="error"/><br/>
     Your e-mail(*): <form:input path="eMail"/>
     <form:errors path="eMail" cssClass="error"/><br/>
     What is your country: <form:select path="country">
-    <form:options items="${user.countryOptions}"/><br/>
-</form:select><br/>
+    <form:options items="${user.countryOptions}"/></form:select><br/>
 
     What is your age:<br/>
     <form:radiobuttons items="${user.ageScale}" path="age"/><br/>
@@ -30,6 +31,7 @@
     <form:checkboxes items="${user.rights}" path="choosenRights"/>
     <form:errors path="choosenRights" cssClass="error"/><br/>
     <br/>
+
     <input type="submit" value="Submit">
 </form:form>
 </body>

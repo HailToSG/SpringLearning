@@ -8,13 +8,13 @@
 <body><h2>User's personal</h2>
 Name: ${user.firstName} <br/>
 Last name: ${user.lastName} <br/>
+Password: ${user.password} <br/>
 E-mail: ${user.eMail} <br/>
 Country: ${user.country} <br/>
 Age: ${user.age}<br/>
 Salary: ${user.salary}<br/>
 
-Permissions:
-<ul>
+Permissions: <ul>
     <c:forEach var ="tmp" items="${user.choosenRights}">
         <li>${tmp}</li>
     </c:forEach>
